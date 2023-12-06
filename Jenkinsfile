@@ -10,14 +10,14 @@ stages {
                 withCredentials([gitUsernamePassword(credentialsId: 'EBSOURCE', gitToolName: 'Default'), gitUsernamePassword(credentialsId: 'EBDEST', gitToolName: 'Default')]) {
                 sh '''
                 rm -rf EBSYNC.git || true
-                git clone --bare https://gitext.elektrobitautomotive.com/ruk273132/EBSYNC.git
+                git clone --bare https://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@gitext.elektrobitautomotive.com/ruk273132/EBSYNC.git
                 ls
                 cd  /var/jenkins_home/workspace/EB-PERJOB/EBSYNC.git/
-                git remote set-url --push origin https://github.com/rugmak/EBDEST.git
+                git remote set-url --push origin https://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@github.com/rugmak/EBDEST.git
                 git remote -v
                 git fetch -p origin
                 ls
-                git push --mirror --force https://github.com/rugmak/EBDEST.git
+                git push --mirror --force https://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@github.com/rugmak/EBDEST.git
                 '''
                 }
                 }

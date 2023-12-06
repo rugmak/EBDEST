@@ -1,2 +1,3 @@
 Welcome to git synchronisation
 New line
+Git sync
